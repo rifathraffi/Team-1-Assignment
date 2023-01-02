@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.demo-form {
+	width: 300px;
+	margin: 0 auto;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.demo-form input[type="text"] {
+	width: 100%;
+	padding: 15px;
+	border: 5px solid #ddeeee;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+.demo-form input[type="submit"] {
+	width: 100%;
+	padding: 15px;
+	background-color: #535b63;
+	border: 0;
+	box-sizing: border-box;
+	cursor: default;
+	font-weight: bold;
+	color: #ffffff;
+}
+</style>
+
+<script type="text/javascript">
+	/* setTimeout(function(){
+	 window.location.reload();
+	 }, 5000); */
+
+	function ageValidation() {
+		var age = document.getElementById('age').value;
+
+		if (isNaN(age)) {
+
+			alert("The age must be a number and not a text or alphanumeric!");
+			return false;
+		}
+
+		if (!(age > 1 && age < 100)) {
+
+			alert("The age must be a number between 1 and 100");
+			return false;
+		}
+		return true;
+	}
+</script>
+
+<meta charset="ISO-8859-1">
+<title>Demo HTML for LGAviva Folks</title>
+</head>
+<body>
+
+	<div class="demo-form">
+		<p style="color: lime;">This is a simple HTMl Demo!</p>
+		<form action="getemp" method="POST">
+			Emp id : <input type="text" name="age" id="age"
+				placeholder="Please provide your here." required>
+						
+			<input type="submit" onclick="ageValidation();">
+		</form>
+	</div>
+	
+
+</body>
+</html>
